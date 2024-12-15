@@ -45,7 +45,7 @@ const images = [
 ];
 
 const downloadImages = async () => {
-  const publicDir = path.join(process.cwd(), 'public', 'assets', 'images');
+  const publicDir = path.join(process.cwd(), 'public', 'images');
   
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
