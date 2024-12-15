@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Row, Col, Card, Button, Space } from 'antd';
 import { RocketOutlined, CodeOutlined, CustomerServiceOutlined, PlayCircleOutlined, BarChartOutlined, MessageOutlined, TeamOutlined } from '@ant-design/icons';
+import { getAssetPath } from '../utils/paths';
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -14,7 +15,7 @@ const Home: React.FC = () => {
           height: '600px',
           margin: '0',
           background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                      url('/images/banner4.jpg')`,
+                      url('${getAssetPath('/images/banner4.jpg')}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -160,7 +161,7 @@ const Home: React.FC = () => {
       <div style={{ 
         padding: '64px 0',
         background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                    url('/images/banner5.jpg')`,
+                    url('${getAssetPath('/images/banner5.jpg')}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -279,7 +280,7 @@ const Home: React.FC = () => {
       <div style={{ 
         padding: '64px 0',
         background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                      url('/images/banner5.jpg')`,
+                      url('${getAssetPath('/images/banner5.jpg')}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
