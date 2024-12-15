@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 或者你的默认分支名
+      - main
 
 jobs:
   deploy:
@@ -31,4 +31,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./L9/frontend/dist
-          force_orphan: true 
+          force_orphan: true
+          cname: # 如果你有自定义域名，在这里添加
