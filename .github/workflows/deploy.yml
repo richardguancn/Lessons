@@ -25,6 +25,7 @@ jobs:
         run: |
           cd L9/frontend
           npm run build
+          cp -r public/assets/images dist/assets/
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

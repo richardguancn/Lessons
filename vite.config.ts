@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Lessons/',
+  base: './',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

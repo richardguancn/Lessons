@@ -264,7 +264,7 @@ const Home: React.FC = () => {
             <div className="fade-in delay-1">
               <img 
                 src="/images/solution.png" 
-                alt="解决方案" 
+                alt="解��方案" 
                 style={{ 
                   width: '100%', 
                   borderRadius: '8px',
@@ -301,7 +301,7 @@ const Home: React.FC = () => {
           <Row gutter={[32, 32]} style={{ padding: '0 50px' }}>
             {[
               {
-                content: "麻雀软件的直播系统帮助我们提升了300%的销售额，非常专业的团队！",
+                content: "麻雀���件的直播系统帮助我们提升了300%的销售额，非常专业的团队！",
                 author: "某电商平台负责人"
               },
               {

@@ -27,6 +27,14 @@ const images = [
     url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'
   },
   {
+    name: 'banner4.jpg',
+    url: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'
+  },
+  {
+    name: 'banner5.jpg',
+    url: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'
+  },
+  {
     name: 'wechat-qr.jpg',
     url: 'https://via.placeholder.com/200x200.png?text=WeChat+QR'
   },
@@ -37,7 +45,7 @@ const images = [
 ];
 
 const downloadImages = async () => {
-  const publicDir = path.join(process.cwd(), 'public', 'images');
+  const publicDir = path.join(process.cwd(), 'public', 'assets', 'images');
   
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });

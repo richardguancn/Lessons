@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     children: routes,
   }
 ], {
-  basename: import.meta.env.BASE_URL,
+  basename: import.meta.env.DEV ? '/' : '/Lessons',
   future: {
     v7_startTransition: true,  // 确保这个配置存在
     v7_relativeSplatPath: true,
