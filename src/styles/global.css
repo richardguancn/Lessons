@@ -1,0 +1,289 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+.ant-layout-header {
+  display: flex;
+  align-items: center;
+}
+
+.ant-menu {
+  flex: 1;
+  min-width: 0;
+}
+
+.ant-layout-content {
+  background: #fff;
+}
+
+.ant-layout-footer {
+  text-align: center;
+  background: #001529;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 24px 50px;
+}
+
+/* 添加以下动画样式 */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.slide-down {
+  animation: slideDown 1s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 1s ease-out;
+}
+
+.zoom-in {
+  animation: zoomIn 0.5s ease-out;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+.delay-0 { animation-delay: 0.2s; }
+.delay-1 { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+} 
+
+/* 在现有样式的基础上添加 */
+
+/* 防止水平滚动 */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 优化响应式布局 */
+@media (max-width: 768px) {
+  .ant-layout-header {
+    padding: 0 20px !important;
+  }
+  
+  .ant-layout-content {
+    padding: 0 !important;
+  }
+  
+  /* Banner 文字在移动端的样式 */
+  h1.ant-typography {
+    font-size: 32px !important;
+  }
+  
+  .ant-typography {
+    font-size: 16px !important;
+  }
+}
+
+/* 优化图片加载 */
+[style*="background-image"] {
+  transition: opacity 0.3s ease;
+}
+
+[style*="background-image"].loading {
+  opacity: 0;
+}
+
+/* 优化卡片在深色背景上的显示 */
+.ant-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+} 
+
+/* 毛玻璃导航栏 */
+.glass-header {
+  background: rgba(0, 21, 41, 0.8) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+  height: 150px !important;
+}
+
+.glass-header:hover {
+  background: rgba(0, 21, 41, 0.9) !important;
+}
+
+/* 导航菜单样式优化 */
+.ant-menu.ant-menu-dark {
+  background: transparent;
+  min-width: 800px;
+}
+
+/* 移除菜单项的默认背景色和hover效果 */
+.ant-menu-dark .ant-menu-item {
+  background: transparent !important;
+  margin: 0 4px !important;
+  padding: 0 30px !important;
+}
+
+/* 菜单项hover效果 */
+.ant-menu-dark .ant-menu-item:hover {
+  background: transparent !important;
+  color: #1890ff !important;
+}
+
+/* 选中菜单项样式 */
+.ant-menu-dark .ant-menu-item-selected {
+  background: transparent !important;
+  font-weight: bold !important;
+  color: #1890ff !important;
+  position: relative;
+}
+
+/* 选中菜单项下划线 */
+.ant-menu-dark .ant-menu-item-selected::after {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: #1890ff;
+  border-radius: 2px;
+}
+
+/* 菜单项文字样式 */
+.ant-menu-dark .ant-menu-item a {
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: color 0.3s ease;
+  font-size: 18px !important;
+  letter-spacing: 1px;
+}
+
+/* 选中和悬停时的文字样式 */
+.ant-menu-dark .ant-menu-item:hover a,
+.ant-menu-dark .ant-menu-item-selected a {
+  color: #1890ff !important;
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
+/* 移除菜单项的默认边框 */
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item::after {
+  display: none;
+}
+
+/* 优化菜单项动画 */
+.ant-menu-item {
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+  height: 150px !important;
+  line-height: 150px !important;
+  padding: 0 35px !important;
+}
+
+/* 菜单项点击效果 */
+.ant-menu-item:active {
+  transform: scale(0.95);
+}
+
+/* Logo 样式 */
+.ant-typography a {
+  color: inherit;
+}
+
+/* Logo hover 效果 */
+a:hover .ant-typography {
+  color: #1890ff;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  /* 在小屏幕上隐藏 Logo 文字，只显示图标 */
+  .logo-text {
+    display: none;
+  }
+}
+
+/* Logo 动画 */
+.logo-icon {
+  transition: transform 0.3s ease;
+}
+
+.logo-icon:hover {
+  transform: rotate(360deg);
+}
+
+/* 更新导航栏相关样式 */
+.ant-menu-horizontal {
+  height: 150px !important;
+  line-height: 150px !important;
+  border: none !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 1600px) {
+  .ant-menu-item {
+    padding: 0 30px !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .ant-menu-item {
+    padding: 0 20px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ant-menu {
+    display: none;
+  }
+}
+  
